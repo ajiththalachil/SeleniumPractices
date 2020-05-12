@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="FreshToHomeQA">
+	<parameter name="URL" value="null"></parameter>
+	<test name="QARegressionTests" parallel="methods" thread-count="3">
+		<groups>
+			<run>
+				<include name="baseRun"></include>
+			</run>
+		</groups>
+		<classes>
+			<class name="QAPackage.HomePageTest">
+			<methods>
+			<include name="homePageNavTest"></include>
+			</methods>
+			</class>
+		</classes>
+	</test> <!-- Test -->
+</suite> <!-- Suite -->

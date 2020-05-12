@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite parallel="methods" name="Failed suite [FreshToHomeQA]" guice-stage="DEVELOPMENT">
+  <test thread-count="5" parallel="methods" name="QARegressionTests(failed)">
+    <parameter name="URL" value="null"/>
+    <classes>
+      <class name="QAPackage.HomePageTest">
+        <methods>
+          <include name="homPageCitySelectionsTest"/>
+          <include name="switchCountryLinkPresentTest"/>
+          <include name="inputIntialize"/>
+          <include name="browserOpen"/>
+          <include name="quitDriver"/>
+          <include name="switchCountryLinkClickableTest"/>
+          <include name="homePageNavTest"/>
+        </methods>
+      </class> <!-- QAPackage.HomePageTest -->
+    </classes>
+  </test> <!-- QARegressionTests(failed) -->
+</suite> <!-- Failed suite [FreshToHomeQA] -->
