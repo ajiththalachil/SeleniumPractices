@@ -11,7 +11,6 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterMethod;
-import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
@@ -66,8 +65,8 @@ public class HomePageTest extends InitializeDriver {
 		log.info("Executing home page navigation");
 		log.info(driver.getTitle());
 		log.info("Home Page Navigation done successfully");
-		Assert.assertTrue(homePage.citySelectionPopUp.isDisplayed());
-		if (homePage.citySelectionPopUp.isDisplayed() == false) {
+		Assert.assertTrue(homePage.countryLinkUae().isDisplayed());
+		if (homePage.cityPopUp().isDisplayed() == false) {
 			log.fatal("The Home page is not displayed properly");
 		}
 		try {
@@ -83,8 +82,8 @@ public class HomePageTest extends InitializeDriver {
 	public void switchCountryLinkPresentTest() {
 		methodName = Thread.currentThread().getStackTrace()[1].getMethodName();
 		log.info("Executing UAE Country Selection link available");
-		wait.until(ExpectedConditions.visibilityOf(homePage.citySelectionPopUp));
-		boolean linkPresent = homePage.switchToCountryToAE.isDisplayed();
+		wait.until(ExpectedConditions.visibilityOf(homePage.cityPopUp()));
+		boolean linkPresent = homePage.countryLinkUae().isDisplayed();
 		Assert.assertEquals(linkPresent, true);
 		if (linkPresent == false) {
 			log.error("The Country change link is not displayed");
@@ -102,9 +101,9 @@ public class HomePageTest extends InitializeDriver {
 	public void switchCountryLinkClickableTest() {
 		methodName = Thread.currentThread().getStackTrace()[1].getMethodName();
 		log.info("Executing UAE Country Selection link Click");
-		wait.until(ExpectedConditions.visibilityOf(homePage.citySelectionPopUp));
+		wait.until(ExpectedConditions.visibilityOf(homePage.cityPopUp()));
 		homePage.countryLinkUaeClick();
-		wait.until(ExpectedConditions.visibilityOf(homePage.currentCitySelected));
+		wait.until(ExpectedConditions.visibilityOf(homePage.currentCitySel()));
 		String newCityName = homePage.currentCityText();
 		Assert.assertEquals(selectionCountryUAE, newCityName);
 		if (selectionCountryUAE.equalsIgnoreCase(newCityName) == false) {
@@ -124,14 +123,14 @@ public class HomePageTest extends InitializeDriver {
 	public void homPageCitySelectionsTest() {
 		methodName = Thread.currentThread().getStackTrace()[1].getMethodName();
 		log.info("Executing home page all city selections testcase");
-		List<WebElement> citySelections = homePage.citySelectionList;
+		List<WebElement> citySelections = homePage.citySelectList();
 	    String capturedCities[] = new String[citySelections.size()];
 		for (int cityId = 0; cityId < citySelections.size(); cityId++) {
-			wait.until(ExpectedConditions.visibilityOf(homePage.citySelectionPopUp));
-			citySelections = homePage.citySelectionList;
+			wait.until(ExpectedConditions.visibilityOf(homePage.cityPopUp()));
+			citySelections = homePage.citySelectList();
 			homePage.citylistText(cityId);
 			homePage.cityListSelectCity(cityId);
-			wait.until(ExpectedConditions.visibilityOf(homePage.currentCitySelected));
+			wait.until(ExpectedConditions.visibilityOf(homePage.currentCitySel()));
 			selectedCityName = homePage.currentCityText();	
 			if (selectedCityName.contains("/")==true) {
 				String[] cityNameSplit = selectedCityName.split("/");

@@ -17,21 +17,37 @@ public class HomePageObjects {
 
 	// Link for Switching the Country
 	@FindBy(xpath = "//div[@class = 'switch-country']//a[@id = 'AE']")
-	WebElement switchToCountryToAE;
+	private WebElement switchToCountryToAE;
 
 	// List of cities available in the pop up
 	@FindBy(xpath = "//div[@class = 'switch-city']/ul/li")
-	List<WebElement> citySelectionList;
+	private List<WebElement> citySelectionList;
 
 	// The City Selection Pop up
 	@FindBy(id = "cityModal")
-	WebElement citySelectionPopUp;
+	private WebElement citySelectionPopUp;
 
 	// The currently selected city displayed on the top right
 	@FindBy(css = "span#currentCity")
-	WebElement currentCitySelected;
+	private WebElement currentCitySelected;
 	
 	/************************************************-Methods-***********************************************/
+	
+	public WebElement countryLinkUae() {
+		return switchToCountryToAE;
+	}
+	
+	public WebElement cityPopUp() {
+		return citySelectionPopUp;
+	}
+	
+	public List <WebElement> citySelectList(){
+		return citySelectionList;
+	}
+	
+	public WebElement currentCitySel() {
+		return currentCitySelected;
+	}
 
 	public void countryLinkUaeClick() {
 		switchToCountryToAE.click();
