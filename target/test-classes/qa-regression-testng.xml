@@ -10,9 +10,6 @@
 		</groups>
 		<classes>
 			<class name="QAPackage.HomePageTest">
-			<methods>
-			<include name="homePageNavTest"></include>
-			</methods>
 			</class>
 		</classes>
 	</test> <!-- Test -->

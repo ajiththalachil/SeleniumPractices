@@ -6,3 +6,11 @@
 2020-05-06-18:40:10.696 [TestNG-test=QARegressionTests-1] INFO  QAPackage.HomePageTest - homePageNavTest - Test Finished Execution
 2020-05-06-18:40:10.697 [TestNG-test=QARegressionTests-1] INFO  QAPackage.HomePageTest - ************************NEXT*****************************************
 2020-05-06-18:40:11.600 [TestNG-test=QARegressionTests-1] INFO  QAPackage.HomePageTest - ************************END OF SUITE*****************************************
+2020-05-13-23:16:00.611 [main] INFO  QAPackage.HomePageTest - Data Initiated successfully
+2020-05-13-23:16:31.943 [TestNG-test=QARegressionTests-1] INFO  QAPackage.HomePageTest - Browser Initiated Successfully
+2020-05-13-23:16:31.951 [TestNG-test=QARegressionTests-1] INFO  QAPackage.HomePageTest - Executing home page navigation
+2020-05-13-23:16:35.787 [TestNG-test=QARegressionTests-1] INFO  QAPackage.HomePageTest - FreshToHome Home - Buy Fresh Fish, Chicken and Mutton Online.
+2020-05-13-23:16:35.787 [TestNG-test=QARegressionTests-1] INFO  QAPackage.HomePageTest - Home Page Navigation done successfully
+2020-05-13-23:16:37.638 [TestNG-test=QARegressionTests-1] INFO  QAPackage.HomePageTest - homePageNavTest - Test Finished Execution
+2020-05-13-23:16:37.639 [TestNG-test=QARegressionTests-1] INFO  QAPackage.HomePageTest - ************************NEXT*****************************************
+2020-05-13-23:16:38.960 [TestNG-test=QARegressionTests-1] INFO  QAPackage.HomePageTest - ************************END OF SUITE*****************************************
