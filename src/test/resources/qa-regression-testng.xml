@@ -3,11 +3,6 @@
 <suite name="FreshToHomeQA">
 	<parameter name="URL" value="null"></parameter>
 	<test name="QARegressionTests" parallel="methods" thread-count="3">
-		<groups>
-			<run>
-				<include name="baseRun"></include>
-			</run>
-		</groups>
 		<classes>
 			<class name="QAPackage.HomePageTest">
 			</class>
